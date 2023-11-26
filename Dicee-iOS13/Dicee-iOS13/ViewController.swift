@@ -13,19 +13,38 @@ class ViewController: UIViewController {
     @IBOutlet weak var diceImageView1: UIImageView!
     @IBOutlet weak var diceImageView2: UIImageView!
     
+    var dices = [UIImage(imageLiteralResourceName: "DiceOne"),
+                UIImage(imageLiteralResourceName: "DiceTwo"),
+                UIImage(imageLiteralResourceName: "DiceThree"),
+                UIImage(imageLiteralResourceName: "DiceFour"),
+                UIImage(imageLiteralResourceName: "DiceFive"),
+                UIImage(imageLiteralResourceName: "DiceSix")]
+    var leftDiceNumber = 1
+    var rightDiceNumber = 5
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // who.what = value
-        diceImageView1.image = UIImage(imageLiteralResourceName: "DiceSix")
+//        who.what = value
+//        diceImageView1.image = UIImage(imageLiteralResourceName: "DiceSix")
 //        diceImageView1.alpha = 0.5
-        diceImageView2.image = UIImage(imageLiteralResourceName: "DiceTwo")
+//        diceImageView2.image = UIImage(imageLiteralResourceName: "DiceTwo")
     }
 
     @IBAction func ㅣrollButtonPressed(_ sender: UIButton) {
-        print("Button got tapped.")
-        diceImageView1.image = UIImage(imageLiteralResourceName: "DiceFour")
-        diceImageView2.image = UIImage(imageLiteralResourceName: "DiceSix")
+        diceImageView1.image = dices[leftDiceNumber]
+        
+        diceImageView2.image = dices[rightDiceNumber]
+        
+        leftDiceNumber += 1
+        rightDiceNumber -= 1
+        
+        print(leftDiceNumber)
+        print(rightDiceNumber)
+        
+//        print("Button got tapped.")
+//        diceImageView1.image = UIImage(imageLiteralResourceName: "DiceFour")
+//        diceImageView2.image = UIImage(imageLiteralResourceName: "DiceSix")
     }
     
 }
