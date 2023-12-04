@@ -34,7 +34,7 @@ class ViewController: UIViewController {
 //        diceImageView2.image = UIImage(imageLiteralResourceName: "DiceTwo")
     }
 
-    @IBAction func ㅣrollButtonPressed(_ sender: UIButton) {
+    @IBAction func ㅣrollButtonPressed(_ sender: UIButton) 
         
 //        diceImageView1.image = dices[Int.random(in: 0...5)]
 //        diceImageView2.image = dices[Int.random(in: 0...5)]
